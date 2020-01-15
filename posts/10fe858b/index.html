@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-mu.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mu-16.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mu-16.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/mulogo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="互联网,关于产品,to B,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="木枝" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="从需求与业务流程来聊一聊，刚接手 TO B 产品时该怎么做？">
+<meta name="keywords" content="互联网,关于产品,to B">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于 To B 产品那点事">
+<meta property="og:url" content="http://yoursite.com/posts/10fe858b/index.html">
+<meta property="og:site_name" content="木枝">
+<meta property="og:description" content="从需求与业务流程来聊一聊，刚接手 TO B 产品时该怎么做？">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-14T07:49:46.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于 To B 产品那点事">
+<meta name="twitter:description" content="从需求与业务流程来聊一聊，刚接手 TO B 产品时该怎么做？">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/posts/10fe858b/">
+
+
+
+
+
+  <title>关于 To B 产品那点事 | 木枝</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">木枝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">我一直都在你身后，就差你一个回头</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/10fe858b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kieda">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/muzhilogo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木枝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">关于 To B 产品那点事</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T15:46:03+08:00">
+                2018-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/碎片化阅读笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">碎片化阅读笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/posts/10fe858b/" class="leancloud_visitors" data-flag-title="关于 To B 产品那点事">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>从需求与业务流程来聊一聊，刚接手 TO B 产品时该怎么做？</p>
+<a id="more"></a>
+<h3 id="木枝对于WMS-系统在移动端的分析"><a href="#木枝对于WMS-系统在移动端的分析" class="headerlink" title="@木枝对于WMS 系统在移动端的分析"></a>@木枝对于WMS 系统在移动端的分析</h3><p>基于客户定制化的产品，同时产品使用的决策权在某个人手中「<strong>这个关键的决策者可以是老板本人，也可以是某个具体业务的负责人，无论如何，这个角色都是 ToB 产品能够走出去落地的关键性 KOL</strong>。」</p>
+<p>例子：</p>
+<p>『可是，非常遗憾，微信企业版推出至今，鲜有人用，其核心的原因就在于<strong>微信企业版本质上应该是 ToB 产品，但是它并没有服务好决策者</strong>。</p>
+<p><strong>钉钉在推出之后，其一系列功能都是围绕着中小公司的老板打造的</strong>，就比如 “Ding” 这个功能，其核心目的是防止在沟通中出现“假死”——明明看到了老板的留言，却假装没看到』</p>
+<h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p><strong>而我们的产品主要面对的是管理层，直接显示数据和结果给管理者。</strong></p>
+<p>目前公司工厂仓库已经在使用 BS 端的仓库管理系统，但是目前由于公司的执行层和管理层还是无法方便快捷的查看相关数据，于是期望使用移动端来方便快捷的查看相关数据。同时希望控制成本，能够高效快速的完成预期效果。于是我们设计使用微信为入口，使用H5快速开发来嵌入到微信打开查看。</p>
+<p><strong>我们的产品则应该将一定时间段，一定周期内工作成果的展现、统计以及业务发展的趋势变化等等因素，需要的是全局性的产品，能够直接高效的给决策者。</strong></p>
+<p>由于针对的是管理层，即上文提到的管理层用户，他们更多关注的是每日的库存量、库存的准确率以及不同仓库的库存量，所以针对这类用户在了解需求后，更多的是从管理的角度进行需求的分析和功能的设计。</p>
+<h4 id="业务流程"><a href="#业务流程" class="headerlink" title="业务流程"></a>业务流程</h4><p><strong>目前来说，WMS 产品在移动端的显示肯定只有一部分简单的流程，从权限，数据显示，数据分析三个方面来显示其关键信息。</strong></p>
+<p>在业务流程设计时，因为这个项目是驻厂调研，所以我们在进行每个模块需求调研前都会和该功能模块的业务专家进行学习，了解具体的业务逻辑和现有的业务流程，只有对业务内容和逻辑了解，才能在现在业务流程上提出优化方案。同时了解业务流程中每一个节点的业务操作，针对有重复或可优化的节点进行优化。</p>
+<p>所以在进行业务流程设计时，要对每个模块中每个环节每个处理人进行实际的需求获取，了解他们对现有方案的反馈并且获取他们需求本质，从而设计出更为优化、效率更高的业务流程。</p>
+<p><strong>ToC 的产品需要在路径上尽可能短，从而满足即时性需求，而 ToB 的产品路径是由计划好的业务本身决定的，少一步业务就走不下去了</strong></p>
+<p>突然想到了一个例子：来自刘润老师的课程</p>
+<h4 id="10分钟闭嘴理发店"><a href="#10分钟闭嘴理发店" class="headerlink" title="10分钟闭嘴理发店"></a>10分钟闭嘴理发店</h4><p>小张开了家理发店。他边学产品课程，边在思考：我的产品到底是什么？我应该如何定义产品？我满足了什么”功能需求”和”情感需求”？</p>
+<p>从”本能层，行为层，和意识层”思考，我如何把”理发”这件事，做得更好？（详见底部相关课程）还有，顾客对”理发师卖卡”这件事，深恶痛绝。如何优化？</p>
+<p>那就开设”闭嘴专座”吧。沿着”时间轴”，小张在”服务蓝图”中一步步优化，最终决定，把理发店转型为一家”10分钟闭嘴理发店”。顾客可以在店门口根据红绿灯指示进店，也可以在微信上预约。理发师戴着”闭嘴口罩”，10分钟剪完，讲一个字理发就免费。</p>
+<h4 id="B2B"><a href="#B2B" class="headerlink" title="B2B"></a>B2B</h4><p><strong>所谓的 B2B，其实是 Business Person To Business Person，人与人之间的交易才促成了企业与企业之间的交易</strong>，我们国家酒文化流行，也是说明要向做成生意，首先要能在酒场上成为朋友。</p>
+<p><strong>所以 ToB 的 “B” 指代的是商业机构中的核心决策者或者 KOL</strong>。</p>
+<h3 id="TO-B-产品需求与业务"><a href="#TO-B-产品需求与业务" class="headerlink" title="TO B 产品需求与业务"></a>TO B 产品需求与业务</h3><h4 id="用户群体画像"><a href="#用户群体画像" class="headerlink" title="用户群体画像"></a>用户群体画像</h4><p>分析你的产品面对的是哪类用户。</p>
+<h5 id="管理层用户"><a href="#管理层用户" class="headerlink" title="管理层用户"></a>管理层用户</h5><p>对产品进行管理决策的用户。</p>
+<h5 id="底层用户"><a href="#底层用户" class="headerlink" title="底层用户"></a>底层用户</h5><p>一线用户，你产品的好坏直接决定了这类用户的绩效或者KPI。</p>
+<p><strong>而我们的产品主要面对的是管理层，直接显示数据和结果给管理者。</strong></p>
+<h4 id="客户需求"><a href="#客户需求" class="headerlink" title="客户需求"></a>客户需求</h4><p>每个产品购买者都想以最小的代价获取最大的利益，他们更为看重的产品的成本以及后期维护的成本，因为他们是出资人。</p>
+<p><strong>但是实际工作当中，可能由于客户的需求，你就要对产品的功能或设计做出一定的让步，最终得到的产品应该是满足客户需求的而不是完美的</strong>。</p>
+<h5 id="管理层用户需求–全局性"><a href="#管理层用户需求–全局性" class="headerlink" title="管理层用户需求–全局性"></a>管理层用户需求–全局性</h5><p>管理层用户，即日常工作决策者、员工管理者，这类用户更为关注的是一定周期内工作成果的展现、统计以及业务发展的趋势变化等等因素。他们对产品的需求和底层用户不同，他们关注的是产品全局性的展现。</p>
+<h5 id="底层用户需求–点对点"><a href="#底层用户需求–点对点" class="headerlink" title="底层用户需求–点对点"></a>底层用户需求–点对点</h5><p>底层用户，即日常工作使用的用户群体，也是你在获取需求时重点需要关注的那类用户群体，因为他们是使用产品频率最高也是对产品好坏评价最具有客观性的人群。他们关注的是具体业务流程中涉及到他们的每个环节中，他们要完成哪些工作、通过产品进行哪些操作。在这类用户的需求获取分析过程中，可以通过观察用户实际工作环境下的行为，从而发现他们在现有解决方案中的有点和不足，从而在新的解决方案设计过程中，可以取长补短。</p>
+<p><strong>我们的产品则应该将一定时间段，一定周期内工作成果的展现、统计以及业务发展的趋势变化等等因素，需要的是全局性的产品，能够直接高效的给决策者。</strong></p>
+<h3 id="业务流程-1"><a href="#业务流程-1" class="headerlink" title="业务流程"></a>业务流程</h3><p>To B 的业务流程较为复杂，一个业务场景涉及多个部门的角色相互协作。如果涉及产品没有业务专家，你要先成为一个业务专家，目标用户中的业务专家沟通、交流，对业务场景中涉及的所有业务环节了如指掌，这样才能更好的设计业务流程、优化业务流程，从而根据最优的业务流程规划最优的功能。</p>
+<p><strong>目前来说，WMS 产品在移动端的显示肯定只有一部分简单的流程，从权限，数据显示，数据分析三个方面来显示其关键信息。</strong></p>
+<h3 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h3><p><a href="http://www.woshipm.com/pmd/590889.html" target="_blank" rel="noopener">http://www.woshipm.com/pmd/590889.html</a></p>
+<p>2018年3月12日11:14:08，记录相关信息，便于设计产品。</p>
+<p>2018年3月12日20:05:45，第一次修改。</p>
+<p>2018年3月14日15:46:50 ，第二次修改。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/互联网/" rel="tag"># 互联网</a>
+          
+            <a href="/tags/关于产品/" rel="tag"># 关于产品</a>
+          
+            <a href="/tags/to-B/" rel="tag"># to B</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/bea55162/" rel="next" title="霍金走了，度过了传奇的 76 载春秋">
+                <i class="fa fa-chevron-left"></i> 霍金走了，度过了传奇的 76 载春秋
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/f7e7d8e8/" rel="prev" title="嘿，关于产品经理那点事">
+                嘿，关于产品经理那点事 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/muzhilogo.jpg" alt="Kieda">
+            
+              <p class="site-author-name" itemprop="name">Kieda</p>
+              <p class="site-description motion-element" itemprop="description">Sweet dreams</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/umuzhi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/bbe53031801f" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:umuzhi@163.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#木枝对于WMS-系统在移动端的分析"><span class="nav-number">1.</span> <span class="nav-text">@木枝对于WMS 系统在移动端的分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求"><span class="nav-number">1.1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务流程"><span class="nav-number">1.2.</span> <span class="nav-text">业务流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10分钟闭嘴理发店"><span class="nav-number">1.3.</span> <span class="nav-text">10分钟闭嘴理发店</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B2B"><span class="nav-number">1.4.</span> <span class="nav-text">B2B</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TO-B-产品需求与业务"><span class="nav-number">2.</span> <span class="nav-text">TO B 产品需求与业务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用户群体画像"><span class="nav-number">2.1.</span> <span class="nav-text">用户群体画像</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#管理层用户"><span class="nav-number">2.1.1.</span> <span class="nav-text">管理层用户</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#底层用户"><span class="nav-number">2.1.2.</span> <span class="nav-text">底层用户</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#客户需求"><span class="nav-number">2.2.</span> <span class="nav-text">客户需求</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#管理层用户需求–全局性"><span class="nav-number">2.2.1.</span> <span class="nav-text">管理层用户需求–全局性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#底层用户需求–点对点"><span class="nav-number">2.2.2.</span> <span class="nav-text">底层用户需求–点对点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#业务流程-1"><span class="nav-number">3.</span> <span class="nav-text">业务流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原文链接"><span class="nav-number">4.</span> <span class="nav-text">原文链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kieda</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共141.6k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("CivSAvpSj7dLtay4fmM4Yt8L-gzGzoHsz", "1rgwSD3CvnNg1rzutyoD9izI");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

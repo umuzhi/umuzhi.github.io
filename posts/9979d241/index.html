@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-mu.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mu-16.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mu-16.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/mulogo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="互联网,关于产品,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="木枝" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="就产品设计而言，如何站得更高来思考整个产品的架构？">
+<meta name="keywords" content="互联网,关于产品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高层次来思考产品架构">
+<meta property="og:url" content="http://yoursite.com/posts/9979d241/index.html">
+<meta property="og:site_name" content="木枝">
+<meta property="og:description" content="就产品设计而言，如何站得更高来思考整个产品的架构？">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-12T12:03:27.753Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="高层次来思考产品架构">
+<meta name="twitter:description" content="就产品设计而言，如何站得更高来思考整个产品的架构？">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/posts/9979d241/">
+
+
+
+
+
+  <title>高层次来思考产品架构 | 木枝</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">木枝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">我一直都在你身后，就差你一个回头</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/9979d241/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kieda">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/muzhilogo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木枝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">高层次来思考产品架构</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T19:59:22+08:00">
+                2018-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/碎片化阅读笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">碎片化阅读笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/posts/9979d241/" class="leancloud_visitors" data-flag-title="高层次来思考产品架构">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>就产品设计而言，如何站得更高来思考整个产品的架构？</p>
+<a id="more"></a>
+<h3 id="简单"><a href="#简单" class="headerlink" title="简单"></a>简单</h3><p>其实，<strong>在简单这件事上，最关键的一个深层道理，是依赖于心理学上的一种被称之为 “知识诅咒” 的玩意儿。</strong></p>
+<p>所谓知识诅咒，就是说，现在我明白一件事情，但是要完整清楚的讲授给你，是很难的，因为我们所拥有的知识背景不同，我们对同一件事情的理解不同。这也就解释了，为什么很多老师在上课的时候索然无味，很多人做 Presentation 的时候显得苍白无力，这其实是知识诅咒在起作用。</p>
+<p><strong>知识诅咒表现在产品设计时，有两个关键的定义，一个是设计思维，一个是用户思维。</strong></p>
+<h4 id="用户思维"><a href="#用户思维" class="headerlink" title="用户思维"></a>用户思维</h4><p>用户在意第一次的感觉，色香味多大，也就是第一次的感觉，比如见到一个人，是不是有感觉；一个产品是不是很有设计感。</p>
+<h4 id="设计思维"><a href="#设计思维" class="headerlink" title="设计思维"></a>设计思维</h4><p>当你要在页面中增加一个 按钮，那么你的思维模式是什么？可能会有三种：一种是要够好看直观，一种是要用户理解，一种是要和其他交互相得益彰。在这三种里，后两种是高级的产品经理思考的模式，我们这里重点来说用户理解。</p>
+<p>初级的产品经理对用户理解这个事情，其实会容易建立在 “我的理解” 这点上，误以为自己就是用户。其实你未必是用户。比如我们设计一篇文章的显示，我们会从文章的结构、展示、内容长度、分页等等几个角度去考量，但是有一种情况一定要加入其中，<strong>那就是你的用户是谁</strong>。如果是 IT 圈里的人，那他们习惯了阅读长文档，而且会自动解析文章布局，平铺直叙也许是最简单的，阅读模式可能是最好的；可如果是父母，他们过往阅读的都是报纸、杂志，而且因为年龄增大，对色彩敏感度下降，他们需要更大的字，更亮眼的色彩，更结构化的布局，所以你的设计会更加接近 web 1.0 时代。</p>
+<p>最早的定义这两种思维，是在工业设计中，《设计心理学》中有比较深入的讨论，我们暂不展开。我们想要表达是，<strong>最简单的设计，就是让用户不去思考，不思考则是建立在 “设计思维 = 用户思维” 这个公式之上。</strong></p>
+<p>最重要的是用户思维，这里有篇微信文章《<a href="http://mp.weixin.qq.com/s/uMmk4dXYE6IaCLpzJlWyJQ" target="_blank" rel="noopener">深度干货：高薪人士如何抓事物的本质？</a>》可以帮助你更加深入的了解。</p>
+<h4 id="木枝的理解"><a href="#木枝的理解" class="headerlink" title="@木枝的理解"></a>@木枝的理解</h4><p><strong>其实也就是从多个维度和模型来考虑，然后最大化的满足你的需求，同时保留最好的设计。</strong></p>
+<h3 id="路径设计：引导用户使用产品"><a href="#路径设计：引导用户使用产品" class="headerlink" title="路径设计：引导用户使用产品"></a>路径设计：引导用户使用产品</h3><p><strong>所谓产品路径，其实是我们希望如何引导用户来使用产品。</strong></p>
+<p><strong>所谓产品主路径，是指所有用户在产品使用中依据产品功能频次和功能间关系引导，所形成的一条流量转化路径。</strong>这个定义稍微有一些拗口，我们来拆分理解一下。</p>
+<p>首先来看产品功能频次。</p>
+<p>在产品中，不同的功能是有频次预期的，比如微信，它的最高频功能是 “聊天”，同时这也是微信的核心，而其他功能，比如 “摇一摇”、“附近的人”、“支付” 等，都是频次偏低的功能，所以你会看到，在微信的首页中，聊天永远是最高优先级展示，微信的提醒也是以聊天为基础的。这个时候，你可能会问，朋友圈也算是高频功能，是不是也是主路径呢？其实不然，朋友圈并非微信的功能属性，而是运营属性，它的存在是为了活跃留存微信用户，我们可以在以后产品运营相关的文章中再详细讨论。</p>
+<p>有了产品功能的频次预期，以及产品的核心功能（核心功能一定也是高频功能），然后我们就要看各个功能之间的关系了。</p>
+<p>回到微信这个例子，我们会看到，通讯录是第二优先级的页面，这是因为聊天的第一辅助功能是找人，所以我们也同时看到了像类似 “摇一摇”、“附近的人” 这些功能的存在意义，因为它们都是辅助核心高频功能的次高频功能。</p>
+<p>如此便引出了一条产品的主路径，这条<strong>主路径定义了产品的定位和核心</strong>。</p>
+<p>我们往后在这条主路径上可以衍生出许多的分支路径，包括附属增值功能路径、运营路径、流量变现路径等等，这些是产品经理需要打下的夯实基础。</p>
+<h4 id="木枝的理解-1"><a href="#木枝的理解-1" class="headerlink" title="@木枝的理解"></a>@木枝的理解</h4><p><strong>其实也可以理解为思维导图的模式，因为思维导图是发散的，但是一定是有主线到辅线，不可能都是平级的，才能创造更好的产品。</strong></p>
+<h3 id="产品的生命周期"><a href="#产品的生命周期" class="headerlink" title="产品的生命周期"></a>产品的生命周期</h3><p><strong>在产品的向下发展中，有两个关键的原则，其一是向后迭代，其二是向前兼容。</strong></p>
+<p>我们一般会把迭代分为三种，一个是旧功能优化，一个是运营支撑，一个是新功能研发。这三种都是生长于主路径的生态之中，如何区分优先级虽然依赖于许多方面，但是主路径决定了迭代的节奏。关于向后迭代中节奏更深层的讨论，我们以后可以再写文章来探讨。</p>
+<h4 id="向后迭代"><a href="#向后迭代" class="headerlink" title="向后迭代"></a>向后迭代</h4><p>因为我们已经设计了产品的主路径，那么向后迭代的关键依据则是在主路径中如何进行丰富化。在我们实际的工作中，比较容易出现一种情况，就是需求集中爆发，许多人回来向产品经理提需求，包括老板、用户、客户、运营同事、其他同事、自己等等。这些需求的筛选考验着每一个产品经理的功力，这其中的一个关键依据，则是这些需求在主路径中的价值和作用。</p>
+<h4 id="木枝的引用"><a href="#木枝的引用" class="headerlink" title="@木枝的引用"></a>@木枝的引用</h4><h5 id="产品是该快速迭代还是一次性作对？"><a href="#产品是该快速迭代还是一次性作对？" class="headerlink" title="产品是该快速迭代还是一次性作对？"></a>产品是该快速迭代还是一次性作对？</h5><p>下面是得到的刘润老师分享的经验：</p>
+<p>第一， 目标的确定性。</p>
+<p>滴滴打车，摩拜单车，得到APP，它们的终局是什么样？我估计即便是创始人，也不知道。他们心中只有天堂的方向，但谁也没见过天堂长什么模样。目标不确定时，不断调整方向和姿态的”小步快跑、快速迭代”，是更有效的迭代策略。</p>
+<p>但如果你做的是螺纹钢呢？你的目标是：更好的品质，更低的价格。那你跑什么步，迭什么代啊，你每一批产品，都要比上个版本质量更好，价格更低。目标极度确定时，你需要一次性把事做对。</p>
+<p>第二， 结果的忍受度。</p>
+<p>按钮位置太靠右了，按下去没有抖动效果，颜色和其他部分不协调。这些地方都可以优化，但优化前，用户能”忍受”吗？他们可能会抱怨两句，但看在可以免费骑车、搜到新闻、比价购买的面子上，也就忍了。</p>
+<p>那如果是核电站呢？第一次完全泄漏，第二次减少15%，第三次又减少8%，我们在不断改进，可以吗？绝对不可以。我们对核电站泄露，是零容忍的。</p>
+<p>所以，结果忍受度高的，可以考虑”快速迭代”，结果忍受度低的，要一次性把事做对。</p>
+<p>第三， 迭代的频繁度。</p>
+<p>谷歌和百度网站，理论上一天可以迭代几百次；手机APP，一周可以更新好几次。这些迭代频繁度高的，步子小，可以快速迭代。</p>
+<p>那手机呢？现在人一年换一个手机，小米4不够的地方，小米5改进；小米5不够的地方，小米6改进。步子也不算大。</p>
+<p>那冰箱呢？水龙头呢？大衣柜呢？这些东西，你只有装修时，才会买新的。一个人一辈子装修几套房子？用户一旦买了你的大衣柜，你就几乎没机会给他迭代了。对这样迭代频繁度几乎为零的产品，更要一次性把事做对。</p>
+<p>第四， 用户的数量级。</p>
+<p>你的产品，到底面对多少用户？比如滴滴打车，面对几亿用户，你用几万用户给你陪跑，他们失望了，还有更多用户可以开发。</p>
+<p>而在最开始的案例中，你的用户就是几百户邻居，你让他们给你陪跑，大家都因为难吃而不来了，你还有谁可以开发呢？</p>
+<p>所以，面对大数量级的用户群，更适合小步快跑，面对少量用户，更适合一次性把事做对。</p>
+<h4 id="向前兼容"><a href="#向前兼容" class="headerlink" title="向前兼容"></a>向前兼容</h4><p><strong>向前兼容是一种要求产品经理提前做好向后迭代设计，同时保持克制的原则。</strong>许多产品经理最容易犯的错误，就是在设计新功能时不考虑已有的东西。<strong>在《备忘录》一书中，提到一个关键点，就是产品必须要让用户觉得平滑过渡。</strong>平顺的产品迭代拥有很强的继承属性，我们会发现手边好的产品都具有这种特性，虽然迭代更新了许多版，但是从来没有失去它最早的样貌。</p>
+<p>能够保持向前的兼容，这表示产品在最早规划时就已经做好了向后迭代的设计，也就是主路径很清晰。所以才能使产品始终保持继承一致性。相反，如果产品在迭代中发现主路径错了，或者要调整，那么势必导致产品的设计发生很大的变化，这对用户是一种很大的伤害。<strong>结合我们前面提到的 “用户思维”，你好不容易建立起来的用户知识体系，就是因为你设计上的变故，导致了用户的流失。</strong></p>
+<h3 id="产品分层"><a href="#产品分层" class="headerlink" title="产品分层"></a>产品分层</h3><p><strong>所谓产品层次感，是说在产品的设计中，除了功能的设计与叠加，还有在产品垂直逻辑分层中拥有分层的特性。</strong>这种分层，是一种自下而上的，这种分层的理解对产品经理提出了一种新的要求，你需要懂得产品的架构逻辑。</p>
+<p>基于软件工程理论，产品本来就是至少要分为三层的（至少到现在为止是的），即典型的 MVC（Model，View，Controller），这种描述对产品经理理解产品分层帮助极大。</p>
+<h4 id="功能层"><a href="#功能层" class="headerlink" title="功能层"></a>功能层</h4><p>其中都是默认的，但有个新的概念层次,<strong>功能层</strong>。</p>
+<p>功能层和表现层的关系，就是功能逻辑设计和界面原型设计。这种时候的<strong>功能层，是面向用户思维去考量的</strong>。功能层是建立在逻辑层之上的一个过渡层，是对产品在最终设计之前的一种逻辑设计。比如，设计一个登陆功能，考量登陆的操作步骤和交互逻辑，这个是属于功能层，而其中的状态流转则是属于逻辑层。</p>
+<p>有了功能层的设计，我们再向上表现，就是产品最后的交互设计了。交互设计是将功能更好的表达，也就是我们常说的用户体验优化。到了这一层，产品就是要面向用户了，所以<strong>表现层也叫做 UI（User Interface）层，即用户接口层，在这里，友好的交互设计是这一层的宗旨</strong>。</p>
+<p>我们拥有分层的理念之后，就可以更加清楚我们在哪一层，在做哪一个阶段。</p>
+<h4 id="木枝的理解-2"><a href="#木枝的理解-2" class="headerlink" title="@木枝的理解"></a>@木枝的理解</h4><p>个人理解就是逻辑之外需要考虑人性的层次，假如在未来的家庭里，丈夫和妻子都是机器人，丈夫机器人向妻子提出的最常见的请求会是这样的：</p>
+<p>“能否将第三个房间，第六个家具，第九个位置的东西拿给我？”</p>
+<p>接下来，妻子机器人拿来的是糖还是一瓶墨水，她并不用去管。在这个例子中，你可以看到计算机和人类的行为有两点不同之处。一个是编号代替了实际的对象，另一个则很有趣，如果丈夫机器人以为那个地方放的是糖，但妻子拿来的是墨水，他可能也会直接倒进咖啡里，这其实就是我们遇到的系统宕机的情况。</p>
+<p>丈夫机器人能否会像人一样说“帮我拿一下客厅茶几上的那个白色的糖盒子”呢？也是可以的，这时妻子机器人必须进行两步操作，第一步是查找，找到客厅对应的房间编号，也就是前面说的地址，茶几对应的家具地址，以及白色糖盒子对应的位置地址，然后把糖盒子拿过来。也就是说，<strong>计算机的操作怎么都绕不过编号去，</strong>这也是史教授等人说编号的设计和实现方法特别重要的原因。</p>
+<p>而人就会想的复杂些，面对的是不确定的人的心理。</p>
+<h3 id="架构设计是什么样的体验"><a href="#架构设计是什么样的体验" class="headerlink" title="架构设计是什么样的体验"></a>架构设计是什么样的体验</h3><p>我们发现，<strong>产品因为分层和模块化，使得产品呈现出架构感</strong>。</p>
+<p><strong>产品架构是一个及其复杂的问题，但是简单理解，可以看成是不同的系统、功能模块之间，沿着整个产品的 “商业主路径” 形成的一套逻辑体系。</strong></p>
+<p><strong>互联网的本质是 “连接”，这是互联网区别于传统供应链的最关键部分。</strong></p>
+<p>在互联网的体系中，早期的投入成本巨大，但是往后随着规模的复制，其边际成本下降，从而形成网络效应。有了网络效应，互联网才能有变现的机会。因此，互联网的关键是管理流量，并且像大浪淘沙般产出价值和现金流，这也几乎是所有互联网产品的运转模式。</p>
+<p>因为有了流量，我们必须让产品的主路径分解到逻辑的每一个层面，让各个模块之间有机的配合。比如，当一个社区的流量随着社区的活跃丰富起来之后，需要商城来分流实现变现，这时就需要在整个产品架构中产生新的业务线来支撑。一个商城包含了仓储系统、支付系统、订单管理系统、客服系统、财务系统等等，这又是一个新的架构，这相当于从主路径中长出一个大分支。这时你会发现，你的整个产品架构变得丰满，如果客服系统可以成为一个基础设施的话，它甚至又可以服务于原来的社区产品。</p>
+<h4 id="木枝的理解-3"><a href="#木枝的理解-3" class="headerlink" title="@木枝的理解"></a>@木枝的理解</h4><p><strong>实现产品仅仅是基础，设计产品的时候同时还设计了生态和商业模式才是高屋建瓴。如 App Store 。</strong></p>
+<h3 id="延展下去，是商业本质"><a href="#延展下去，是商业本质" class="headerlink" title="延展下去，是商业本质"></a>延展下去，是商业本质</h3><p>其实，无论是产品还是运营，都是为了商业的本质。</p>
+<p>作为产品经理，特别是进阶的产品经理，更需要了解自己所在企业的商业核心是什么，这样才能更好地理解我们所做的产品到底是在做什么。</p>
+<p>前几年的互联网老炮们把免费炒作得有些跑偏了，因为做产品核心并不是服务用户这么简单，而是要为企业商业提供价值。</p>
+<h4 id="木枝的理解-4"><a href="#木枝的理解-4" class="headerlink" title="@木枝的理解"></a>@木枝的理解</h4><p>目的要明确，圈钱方式要到位。产品盈利的核心才是产品的护城河。</p>
+<h3 id="The-original-link"><a href="#The-original-link" class="headerlink" title="The original link"></a>The original link</h3><p><a href="http://www.woshipm.com/pmd/500448.html" target="_blank" rel="noopener">http://www.woshipm.com/pmd/500448.html</a></p>
+<p>2018-3-12 19:54:29，Record relevant information to facilitate the design of related products.</p>
+<p>2018-3-12 19:53:36，Thinking over.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/互联网/" rel="tag"># 互联网</a>
+          
+            <a href="/tags/关于产品/" rel="tag"># 关于产品</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/4e099452/" rel="next" title="生活始于走出舒适区的那一刻">
+                <i class="fa fa-chevron-left"></i> 生活始于走出舒适区的那一刻
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/bea55162/" rel="prev" title="霍金走了，度过了传奇的 76 载春秋">
+                霍金走了，度过了传奇的 76 载春秋 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/muzhilogo.jpg" alt="Kieda">
+            
+              <p class="site-author-name" itemprop="name">Kieda</p>
+              <p class="site-description motion-element" itemprop="description">Sweet dreams</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/umuzhi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/bbe53031801f" target="_blank" title="简书">
+                    
+                      <i class="fa fa-fw fa-globe"></i>简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:umuzhi@163.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单"><span class="nav-number">1.</span> <span class="nav-text">简单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用户思维"><span class="nav-number">1.1.</span> <span class="nav-text">用户思维</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计思维"><span class="nav-number">1.2.</span> <span class="nav-text">设计思维</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#木枝的理解"><span class="nav-number">1.3.</span> <span class="nav-text">@木枝的理解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路径设计：引导用户使用产品"><span class="nav-number">2.</span> <span class="nav-text">路径设计：引导用户使用产品</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#木枝的理解-1"><span class="nav-number">2.1.</span> <span class="nav-text">@木枝的理解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产品的生命周期"><span class="nav-number">3.</span> <span class="nav-text">产品的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向后迭代"><span class="nav-number">3.1.</span> <span class="nav-text">向后迭代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#木枝的引用"><span class="nav-number">3.2.</span> <span class="nav-text">@木枝的引用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#产品是该快速迭代还是一次性作对？"><span class="nav-number">3.2.1.</span> <span class="nav-text">产品是该快速迭代还是一次性作对？</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向前兼容"><span class="nav-number">3.3.</span> <span class="nav-text">向前兼容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产品分层"><span class="nav-number">4.</span> <span class="nav-text">产品分层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#功能层"><span class="nav-number">4.1.</span> <span class="nav-text">功能层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#木枝的理解-2"><span class="nav-number">4.2.</span> <span class="nav-text">@木枝的理解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#架构设计是什么样的体验"><span class="nav-number">5.</span> <span class="nav-text">架构设计是什么样的体验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#木枝的理解-3"><span class="nav-number">5.1.</span> <span class="nav-text">@木枝的理解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#延展下去，是商业本质"><span class="nav-number">6.</span> <span class="nav-text">延展下去，是商业本质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#木枝的理解-4"><span class="nav-number">6.1.</span> <span class="nav-text">@木枝的理解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-original-link"><span class="nav-number">7.</span> <span class="nav-text">The original link</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kieda</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共141.6k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("CivSAvpSj7dLtay4fmM4Yt8L-gzGzoHsz", "1rgwSD3CvnNg1rzutyoD9izI");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
